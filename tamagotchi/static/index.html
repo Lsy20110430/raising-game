@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>养成日记</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="avatar" id="avatar">?</div>
+    <div class="who">
+      <div class="row">
+        <span class="name" id="girlName">读取中…</span>
+        <span class="stage" id="stageName">—</span>
+        <span class="clock" id="clockVal">第 1 天 15:00</span>
+      </div>
+      <div class="bar"><i id="affBar"></i></div>
+      <div class="sub"><span id="affNum">0 / 1000</span><span id="girlTag">好感度</span></div>
+    </div>
+    <button class="icon" id="resetBtn" title="重新开始">↻</button>
+  </header>
+
+  <section class="stats">
+    <div class="stat"><b id="moodVal">0</b><span>心情</span></div>
+    <div class="stat"><b id="staminaVal">0</b><span>体力</span></div>
+    <div class="stat"><b id="coinVal">0</b><span>金币</span></div>
+    <div class="stat"><b id="levelVal">1</b><span>Lv · <i id="expVal">0/80</i></span></div>
+  </section>
+
+  <main class="chat" id="chat"></main>
+
+  <nav class="actions">
+    <button data-panel="gift">🎁 礼物</button>
+    <button data-panel="work">💼 打工</button>
+    <button data-panel="play">🎡 娱乐</button>
+    <button id="restBtn">💤 休息</button>
+    <button data-panel="memo">📔 回忆</button>
+  </nav>
+
+  <div class="composer">
+    <input id="input" type="text" placeholder="和她说点什么…" autocomplete="off">
+    <button id="sendBtn">发送</button>
+  </div>
+
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet-card">
+      <div class="sheet-head">
+        <h2 id="sheetTitle">礼物</h2>
+        <button class="icon" id="sheetClose">✕</button>
+      </div>
+      <div class="sheet-body" id="sheetBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
